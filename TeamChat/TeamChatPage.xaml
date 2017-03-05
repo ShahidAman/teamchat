@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:local="clr-namespace:TeamChat" x:Class="TeamChat.TeamChatPage">
+	<!--<StackLayout BindingContext = "{x:Reference slider1}" HorizontalOptions="Center" VerticalOptions="Center">
+
+		<Label 
+			Text="{Binding Value,
+		StringFormat='Value is {0:F2}' }"
+
+			Opacity="{Binding Value}"
+			/>
+
+		<Slider x:Name="slider1"></Slider>
+	</StackLayout>-->
+	<StackLayout Padding="0,100,0,0" 
+		BackgroundColor="#FFA733" 
+		VerticalOptions="FillAndExpand" 
+		Spacing="20">
+		<Label Text="Welcome to Team Chat" FontSize="23" HorizontalOptions="Center" />
+
+<Entry Placeholder="API Key" x:Name="apiKeyEntry"/>
+	<StackLayout 
+			Padding="0,30,0,0"
+			HorizontalOptions="FillAndExpand"
+			Spacing="0">
+			
+			<Label Text="Log In"
+			TextColor="White"
+			HorizontalOptions="Center" />
+		</StackLayout>
+		<StackLayout Spacing="2">
+			<Entry Placeholder="Username" />
+			<Entry Placeholder="Password" IsPassword="true"/>
+		</StackLayout>
+		<ActivityIndicator IsEnabled="true" IsRunning="false" x:Name="loginActivityIndicator"/>
+		<StackLayout Orientation="Horizontal"
+			HorizontalOptions="CenterAndExpand"
+			Spacing="30">
+
+			<Button x:Name="buttonCancel"
+			Text="Cancel" TextColor="White"
+			BackgroundColor="#FFA733"
+			BorderRadius="15"
+			BorderColor="White" BorderWidth="2"
+			HeightRequest="40" WidthRequest="150" />
+
+			<Button x:Name="buttonLogin" 
+			Text="Log in" TextColor="#FFA733"
+			BackgroundColor="White" BorderRadius="15"
+			HeightRequest="40" WidthRequest="150" />
+			
+		</StackLayout>
+		<Button x:Name="buttonForgot"
+		Text="Forgot your password?" 
+		TextColor="White" BackgroundColor="Transparent" />
+
+		<Button x:Name="buttonSignUp"
+		Text="New user? Sign Up!" 
+		TextColor="White" BackgroundColor="Transparent" />
+	</StackLayout>
+</ContentPage>
