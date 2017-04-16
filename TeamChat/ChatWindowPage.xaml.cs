@@ -10,6 +10,10 @@ namespace TeamChat
 	{
 		private static HttpClient httpClient;
 		private static string ApiKey;
+		public ChatWindowPage()
+		{
+				
+		}
 		public ChatWindowPage(string apiKey)
 		{
 			InitializeComponent();
